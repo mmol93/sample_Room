@@ -4,6 +4,7 @@ import androidx.room.*
 
 @Dao
 interface RoomMemoDAO {
+    
     @Query("SELECT * FROM room_memo")
     fun getAll() : List<RoomMemo>
 
