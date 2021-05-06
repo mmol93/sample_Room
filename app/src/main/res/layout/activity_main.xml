@@ -11,13 +11,13 @@
         android:id="@+id/recyclerMemo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/editMemo"
+        app:layout_constraintBottom_toTopOf="@+id/saveMemo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editMemo"
+        android:id="@+id/saveMemo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -30,18 +30,52 @@
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973" />
+        app:layout_constraintVertical_bias="0.861" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="@+id/editMemo"
+        android:text="저장"
+        app:layout_constraintBottom_toBottomOf="@+id/saveMemo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.711"
-        app:layout_constraintStart_toEndOf="@+id/editMemo"
-        app:layout_constraintTop_toTopOf="@+id/editMemo"
+        app:layout_constraintStart_toEndOf="@+id/saveMemo"
+        app:layout_constraintTop_toTopOf="@+id/saveMemo"
         app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/saveMemo"
+        android:weightSum="3"
+        >
+
+        <EditText
+            android:id="@+id/editIndex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/editMemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="수정" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
