@@ -14,4 +14,8 @@ interface RoomMemoDAO {
 
     @Delete
     fun delete(memo: RoomMemo)
+
+    @Query("INSERT FROM room_memo WHERE no = :no")
+    fun deleteFromNo(no : Long)
+
 }

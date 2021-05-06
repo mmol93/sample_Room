@@ -19,4 +19,15 @@ class RoomMemo{
         this.content = content
         this.dateTime = dateTime
     }
+    // 수정 시에는 키 값(인덱스)를 지정해줄 필요가 있기 때문에 생성자를 추가한다
+//    constructor(no : Long, content : String, dateTime : Long){
+//        this.no = no
+//        this.content = content
+//        this.dateTime = dateTime
+//    }
+
+    // 키 값만 넣을 경우 해당 키 값(인덱스) 데이터를 삭제
+//    constructor(no : Long){
+//        this.no = no
+//    }
 }

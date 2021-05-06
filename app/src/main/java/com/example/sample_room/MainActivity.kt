@@ -49,6 +49,22 @@ class MainActivity : AppCompatActivity() {
                     refreshAdapter()
                 }
             }
+
+            btnEdit.setOnClickListener {
+                val editIndex = editIndex.text.toString()
+                val editContent = editMemo.text.toString()
+                val dateTime = System.currentTimeMillis()
+
+                // 수정할 데이터를 입력하지 않았다면 해당 인덱스의 데이터 삭제
+                if (editContent.isEmpty()){
+//                    val memo = RoomMemo(editIndex.toLong())
+//                    helper.roomMemoDao().delete(memo)
+                    refreshAdapter()
+                }else{
+//                    val memo = RoomMemo(editIndex.toLong(), editContent, dateTime)
+//                    helper.roomMemoDao().insert(memo)
+                }
+            }
         }
     }
 
