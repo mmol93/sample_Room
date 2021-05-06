@@ -7,7 +7,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "room_memo")
 class RoomMemo{
     // no에 값이 없을 때 자동증가된 숫자 값을 db에 입력해준다.
-    @PrimaryKey
+    // autoGenerate = ture 시 autoIncrement = true 랑 동일한 효과임
+    @PrimaryKey(autoGenerate = false)
     var no : Long? = null
     @ColumnInfo
     var content : String = ""

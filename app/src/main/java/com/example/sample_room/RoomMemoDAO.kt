@@ -15,7 +15,13 @@ interface RoomMemoDAO {
     @Delete
     fun delete(memo: RoomMemo)
 
-    @Query("INSERT FROM room_memo WHERE no = :no")
-    fun deleteFromNo(no : Long)
+    @Update
+    fun update(memo: RoomMemo)
+
+    @Query("UPDATE room_memo SET content = :editText, dateTime = :dateTime WHERE `no` = :index")
+    fun updateByIndex(editText : String, dateTime : Long, index : Long)
+
+    @Query("DELETE FROM room_memo WHERE `no` = :index")
+    fun deleteByIndex(index : Long)
 
 }
