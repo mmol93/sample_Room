@@ -7,7 +7,6 @@ import androidx.room.Room
 import com.example.sample_room.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
     private val binder by lazy { ActivityMainBinding.inflate(layoutInflater) }
     lateinit var helper : RoomHelper
     lateinit var memoAdapter : RecyclerAdapter
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         // 첫 번째: context
         // 두 번째: RoomHelper 클래스
         // 세 번째: 데이터 베이스 이름 지정 (테이블 이름과 다름)
-        // allowMainThreadQueries: 메인 스레드에서도 room 데이터 베이스를 사용할 수 있게 하는 것(지향함)
+        // allowMainThreadQueries: 메인 스레드에서도 room 데이터 베이스를 사용할 수 있게 하는 것(지양함)
         helper = Room.databaseBuilder(applicationContext, RoomHelper::class.java, "room_db")
             .allowMainThreadQueries().build()
 
@@ -31,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         // recyclerView의 adapter 생성
         memoAdapter = RecyclerAdapter(memoList)
 
+        // 리사이클러뷰에 데이터 적용하기
         refreshAdapter()
 
         with(binder){

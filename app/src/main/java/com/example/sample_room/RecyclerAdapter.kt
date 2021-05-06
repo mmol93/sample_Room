@@ -21,6 +21,7 @@ class RecyclerAdapter(val roomMemoList : List<RoomMemo>) : RecyclerView.Adapter<
     override fun getItemCount() = roomMemoList.size
 
     class Holder(val binding : ItemRecyclerBinding) : RecyclerView.ViewHolder(binding.root){
+        // 매개 변수 roomMemo에는 해당 row(=position)의 모든 컬럼 값이 들어있다
         fun setMemo(roomMemo:RoomMemo){
             with(binding){
                 textNo.text = "${roomMemo.no}"
