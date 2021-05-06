@@ -58,8 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.7"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:inputType="number"
+            android:hint="숫자" />
 
         <EditText
             android:id="@+id/editMemo"
@@ -68,7 +68,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="공란 시 삭제 기능" />
 
         <Button
             android:id="@+id/btnEdit"
